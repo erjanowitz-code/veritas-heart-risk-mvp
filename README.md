@@ -1,5 +1,7 @@
 # Veritas AI Heart-Disease Risk Stratification MVP
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/erjanowitz-code/veritas-heart-risk-mvp/blob/main/veritas_heart_risk.ipynb)
+
 > **Prototype, not medical advice.** This is a student hackathon project. It was trained on
 > 303 patients from one clinic in 1988 and has not been clinically validated. Do not use it
 > to make health decisions; talk to a doctor.
@@ -14,7 +16,10 @@ across sex and age groups.
 
 ## Quick start
 
-Requires Python 3.13.
+**Easiest: Google Colab.** Click the "Open in Colab" badge above, then choose **Runtime → Run all**.
+The notebook downloads this repo, trains the models, shows the charts and starts the interactive demo.
+
+**On your own computer** (Python 3.13):
 
 ```bash
 pip install -r requirements.txt
@@ -34,6 +39,7 @@ about "symlinks" and "unauthenticated requests".
 | `data_loader.py` | Loads the dataset with Hugging Face `datasets`, turns `?` placeholders into missing values, makes a stratified 80/20 train/test split |
 | `model.py` | Builds scikit-learn Pipelines (median imputation + classifier), compares a `DummyClassifier` baseline with a `RandomForestClassifier`, runs 5-fold cross-validation, prints test metrics and per-group results |
 | `utils.py` | Saves the charts to `charts/` and runs the interactive risk-tier demo |
+| `veritas_heart_risk.ipynb` | Google Colab notebook that runs the whole pipeline and the demo |
 | `charts/` | Confusion matrices, feature importance, performance by group |
 
 ## Data

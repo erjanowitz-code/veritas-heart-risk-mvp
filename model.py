@@ -135,6 +135,8 @@ def main(run_demo: bool = False):
     if run_demo:
         interactive_loop(forest, X_train)
 
+    return forest, X_train
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Veritas AI heart-disease risk stratification MVP")
